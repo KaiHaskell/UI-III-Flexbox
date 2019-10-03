@@ -152,11 +152,11 @@ h5 {
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
 
 #wrapper {
-  width: 46%;
+  width: 80%;
   margin: auto;
 }
 
-/* */
+/*can't wait for the weekend */
 
 .wrapper {
   width: 876px;
@@ -259,6 +259,7 @@ header nav a:hover {
   display: flex;
   align-items: baseline;
   justify-content: center;
+  margin: 20px 0;
 }
 
 .middle-img {
@@ -317,7 +318,6 @@ header nav a:hover {
   display: flex;
   height: 100px;
   flex-flow: row wrap;
-  border: 1px solid red;
   margin: 30px;
 }
 
@@ -335,14 +335,57 @@ h1 {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  border: 1px solid red;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 30px;
 }
 
 .text-info {
   width: 45%;
   border: 1px solid black;
   background-color: lightgray;
-
-  padding: 12px;
+  padding: 12px 12px 24px 12px;
   flex-basis: 45%;
+  margin-bottom: 24px;
+}
+
+.text-info button {
+  font-size: 12pt;
+  text-align: center;
+  margin-top: 5%;
+  background-color: lightgray;
+  border: 1px solid #000;
+  text-decoration: none;
+  padding: 1px 2px;
+}
+
+.text-info button a {
+  text-decoration: none;
+  color: black;
+}
+
+.bottomportion {
+  display: flex;
+  width: 100%;
+  padding: 30px;
+  justify-content: center;
+}
+
+.bottomtext {
+  flex-direction: column;
+  width: 45%;
+}
+
+.bottomportion h1 {
+  margin-bottom: 10px;
+}
+
+.bottomportion ul {
+  padding-left: 3%;
+  padding-top: 2%;
+}
+
+.bottomportion img {
+  size: 210px 150px;
+  padding-left: 10%;
 }
