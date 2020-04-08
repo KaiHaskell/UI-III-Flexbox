@@ -3,64 +3,389 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
-    font-family: 'Titillium Web', sans-serif;
+html,
+body {
+  height: 100%;
+  font-family: "Titillium Web", sans-serif;
 }
 
-h1, h2, h3, h4, h5 {
-    font-family: 'Bangers', cursive;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Bangers", cursive;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
 }
 
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+#wrapper {
+  width: 80%;
+  margin: auto;
+}
+
+/*can't wait for the weekend */
+
+.wrapper {
+  width: 876px;
+  margin: 0 auto;
+}
+
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 15px;
+}
+
+header nav a {
+  text-decoration-line: none;
+  color: grey;
+}
+
+header nav a:hover {
+  color: darkslategray;
+}
+
+.aboveline {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-content: center;
+  padding: 24px;
+  border-bottom: 1px solid black;
+}
+
+.innobutton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.iod {
+  display: flex;
+  padding: 30px 70px;
+  align-items: center;
+}
+
+.iod p {
+  font-family: "Bangers", cursive;
+  font-size: 60pt;
+  text-align: center;
+}
+
+.button {
+  margin: 8px 24px;
+  font-size: 12pt;
+  text-align: center;
+  border: 1px solid #000;
+  width: 175px;
+  margin: 0 auto;
+  padding: 7px 12px;
+}
+
+.button a {
+  text-decoration: none;
+  color: black;
+}
+
+.button a:hover {
+  color: darkslategray;
+}
+
+/* #features {
+	display:flex;
+	justify-content: flex-start;
+	flex-direction: row;
+	border:1px solid red;
+	width: 49%;
+}
+
+#about {
+	display:flex;
+	justify-content: flex-start;
+	flex-direction: row;
+	border:1px solid red;
+	width: 49%;
+}
+*/
+
+.featabout {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.topline {
+  width: 44%;
+}
+
+.middleimg {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.middle-img {
+  border-radius: 20px;
+}
+
+.serprovi {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 10px 0;
+  padding-bottom: 20px;
+  border-bottom: 1px solid black;
+}
+
+.text-content {
+  width: 29%;
+}
+
+.footercontent {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  justify-content: center;
+  margin-left: 5%;
+}
+
+.copywright {
+  color: grey;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: center;
+  margin: 10px;
+}
+
+/* service.html */
+
+.headerwrap {
+  width: 100%;
+  margin: auto;
+}
+
+.headerwrap img {
+  display: block;
+  width: 100%;
+  max-width: 880px;
+  height: auto;
+  margin: auto;
+  margin-top: 15px;
+}
+
+/*this is for the first half of the page up to Digital Design. */
+
+.services {
+  display: flex;
+  height: 100px;
+  flex-flow: row wrap;
+  margin: 30px;
+}
+
+.services h1 {
+  font-size: 32px;
+}
+
+.services p,
+h1 {
+  width: 880px;
+  margin: auto;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 30px;
+}
+
+.text-info {
+  width: 45%;
+  border: 1px solid black;
+  background-color: lightgray;
+  padding: 12px 12px 24px 12px;
+  flex-basis: 45%;
+  margin-bottom: 24px;
+}
+
+.text-info button {
+  font-size: 12pt;
+  text-align: center;
+  margin-top: 5%;
+  background-color: white;
+  border: 1px solid #000;
+  text-decoration: none;
+  padding: 1px 2px;
+}
+
+.text-info button a {
+  text-decoration: none;
+  color: black;
+}
+
+.bottomportion {
+  display: flex;
+  width: 100%;
+  padding: 30px;
+  justify-content: center;
+}
+
+.bottomtext {
+  flex-direction: column;
+  width: 45%;
+}
+
+.bottomportion h1 {
+  margin-bottom: 10px;
+}
+
+.bottomportion ul {
+  padding-left: 3%;
+  padding-top: 2%;
+}
+
+.bottomportion img {
+  size: 210px 150px;
+  padding-left: 10%;
+}
